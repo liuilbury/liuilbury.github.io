@@ -35,13 +35,14 @@
 <meta name="twitter:description" content="毕竟几人真得鹿，不知终日梦为鱼。">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
     
 
 </head>
+
 
 <body>
     <div id="loading" class="active"></div>
@@ -99,6 +100,22 @@
 </aside>
 
     <main id="main">
+        <link rel="stylesheet" href="/live2d/css/live2d.css">
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+            <div class="hide-button">隐藏</div>
+        </div>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            var message_Path = '/live2d/'
+            var home_Path = 'https://haremu.com/'
+        </script>
+        <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+        <script type="text/javascript" src="/live2d/js/message.js"></script>
+        <script type="text/javascript">
+            loadlive2d("live2d", "/live2d/model/xue/model.json");
+        </script>
         <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
@@ -140,49 +157,10 @@
 </header>
 
 <div class="container body-wrap">
-
-    <ul class="post-list">
+    <ul class=" post-list">
     
-        <li class="post-list-item fade">
-            <article id="post-live2d" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-02-27 20:39:22" datetime="2019-02-27T12:39:22.000Z" itemprop="datePublished">2019-02-27</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/02/27/live2d/">live2d</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-    
-
-        <a href="/2019/02/27/live2d/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-更新日志" class="article-card article-type-post" itemprop="blogPost">
+    <li class="post-list-item fade">
+        <article id="post-更新日志" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
         <time class="post-time" title="2019-02-26 18:34:52" datetime="2019-02-26T10:34:52.000Z" itemprop="datePublished">2019-02-26</time>
@@ -207,9 +185,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h2 id="闲来无事搞个博客，功能简陋，等待更新。"><a href="#闲来无事搞个博客，功能简陋，等待更新。" class="headerlink" title="闲来无事搞个博客，功能简陋，等待更新。"></a>闲来无事搞个博客，功能简陋，等待更新。</h2><h2 id="2019-2-27"><a href="#2019-2-27" class="headerlink" title="2019/2/27"></a>2019/2/27</h2><p>1.初步加入了live2d<br>2.由于背景透明的缘故，导致live2d也透明，正在解决。</p>
-<h2 id="2019-2-26"><a href="#2019-2-26" class="headerlink" title="2019/2/26"></a>2019/2/26</h2><p>1.背景透明<br>2.苦心爬下来的背景图片</p>
-
+        <h2 id="闲来无事搞个博客，功能简陋，等待更新。"><a href="#闲来无事搞个博客，功能简陋，等待更新。" class="headerlink" title="闲来无事搞个博客，功能简陋，等待更新。"></a>闲来无事搞个博客，功能简陋，等待更新。</h2>
     
 
         <a href="/2019/02/26/更新日志/" class="post-more waves-effect waves-button">
@@ -225,14 +201,13 @@
     
 </article>
 
-        </li>
+    </li>
     
     </ul>
 
     
 
 </div>
-
         <footer class="footer">
     <div class="top">
         
@@ -262,6 +237,7 @@
 </footer>
 
     </main>
+
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
@@ -319,7 +295,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -339,7 +315,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </li>
 </template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/search.min.js?v=1.7.2" async></script>
 
 
 
@@ -370,4 +346,5 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </body>
+
 </html>

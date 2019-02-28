@@ -23,27 +23,28 @@
     
     
     <meta name="keywords" content="杂谈">
-    <meta name="description" content="闲来无事搞个博客，功能简陋，等待更新。2019/2/271.初步加入了live2d2.由于背景透明的缘故，导致live2d也透明，正在解决。 2019/2/261.背景透明2.苦心爬下来的背景图片">
+    <meta name="description" content="闲来无事搞个博客，功能简陋，等待更新。">
 <meta name="keywords" content="杂谈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客更新日志">
 <meta property="og:url" content="http://yoursite.com/2019/02/26/更新日志/index.html">
 <meta property="og:site_name" content="和平星">
-<meta property="og:description" content="闲来无事搞个博客，功能简陋，等待更新。2019/2/271.初步加入了live2d2.由于背景透明的缘故，导致live2d也透明，正在解决。 2019/2/261.背景透明2.苦心爬下来的背景图片">
+<meta property="og:description" content="闲来无事搞个博客，功能简陋，等待更新。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-27T15:26:51.890Z">
+<meta property="og:updated_time" content="2019-02-28T11:19:46.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客更新日志">
-<meta name="twitter:description" content="闲来无事搞个博客，功能简陋，等待更新。2019/2/271.初步加入了live2d2.由于背景透明的缘故，导致live2d也透明，正在解决。 2019/2/261.背景透明2.苦心爬下来的背景图片">
+<meta name="twitter:description" content="闲来无事搞个博客，功能简陋，等待更新。">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
     
 
 </head>
+
 
 <body>
     <div id="loading" class="active"></div>
@@ -101,6 +102,22 @@
 </aside>
 
     <main id="main">
+        <link rel="stylesheet" href="/live2d/css/live2d.css">
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+            <div class="hide-button">隐藏</div>
+        </div>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            var message_Path = '/live2d/'
+            var home_Path = 'https://haremu.com/'
+        </script>
+        <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+        <script type="text/javascript" src="/live2d/js/message.js"></script>
+        <script type="text/javascript">
+            loadlive2d("live2d", "/live2d/model/xue/model.json");
+        </script>
         <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
@@ -151,7 +168,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#闲来无事搞个博客，功能简陋，等待更新。"><span class="post-toc-number">1.</span> <span class="post-toc-text">闲来无事搞个博客，功能简陋，等待更新。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-27"><span class="post-toc-number">2.</span> <span class="post-toc-text">2019/2/27</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-26"><span class="post-toc-number">3.</span> <span class="post-toc-text">2019/2/26</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#闲来无事搞个博客，功能简陋，等待更新。"><span class="post-toc-number">1.</span> <span class="post-toc-text">闲来无事搞个博客，功能简陋，等待更新。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2018-2-28"><span class="post-toc-number">2.</span> <span class="post-toc-text">2018/2/28</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-27"><span class="post-toc-number">3.</span> <span class="post-toc-text">2019/2/27</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-26"><span class="post-toc-number">4.</span> <span class="post-toc-text">2019/2/26</span></a></li></ol>
         </nav>
     </aside>
 
@@ -174,7 +191,9 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="闲来无事搞个博客，功能简陋，等待更新。"><a href="#闲来无事搞个博客，功能简陋，等待更新。" class="headerlink" title="闲来无事搞个博客，功能简陋，等待更新。"></a>闲来无事搞个博客，功能简陋，等待更新。</h2><h2 id="2019-2-27"><a href="#2019-2-27" class="headerlink" title="2019/2/27"></a>2019/2/27</h2><p>1.初步加入了live2d<br>2.由于背景透明的缘故，导致live2d也透明，正在解决。</p>
+            <h2 id="闲来无事搞个博客，功能简陋，等待更新。"><a href="#闲来无事搞个博客，功能简陋，等待更新。" class="headerlink" title="闲来无事搞个博客，功能简陋，等待更新。"></a>闲来无事搞个博客，功能简陋，等待更新。</h2><a id="more"></a>
+<h2 id="2018-2-28"><a href="#2018-2-28" class="headerlink" title="2018/2/28"></a>2018/2/28</h2><p>1.重新选择了博客的主题<br>2.加入了很多图片什么的<br>3.。。。</p>
+<h2 id="2019-2-27"><a href="#2019-2-27" class="headerlink" title="2019/2/27"></a>2019/2/27</h2><p>1.初步加入了live2d<br>2.由于背景透明的缘故，导致live2d也透明，正在解决。</p>
 <h2 id="2019-2-26"><a href="#2019-2-26" class="headerlink" title="2019/2/26"></a>2019/2/26</h2><p>1.背景透明<br>2.苦心爬下来的背景图片</p>
 
         </div>
@@ -184,7 +203,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-02-27T15:26:51.890Z" itemprop="dateUpdated">2019-02-27 23:26:51</time>
+    最后更新时间：<time datetime="2019-02-28T11:19:46.921Z" itemprop="dateUpdated">2019-02-28 19:19:46</time>
 </span><br>
 
 
@@ -226,7 +245,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=闲来无事搞个博客，功能简陋，等待更新。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -261,19 +280,6 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/02/27/live2d/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">live2d</h4>
-      </a>
-    </div>
-  
-
-  
-</nav>
-
 
 
     
@@ -356,6 +362,7 @@
 </footer>
 
     </main>
+
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
@@ -374,7 +381,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=闲来无事搞个博客，功能简陋，等待更新。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -413,7 +420,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -433,7 +440,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 </li>
 </template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/search.min.js?v=1.7.2" async></script>
 
 
 
@@ -464,4 +471,5 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </body>
+
 </html>
