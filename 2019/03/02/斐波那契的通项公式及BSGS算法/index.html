@@ -16,24 +16,25 @@
     
     
     
-    <title>post | 和平星 | yiwuwuyu</title>
+    <title>斐波那契的通项公式及BSGS算法 | 和平星 | yiwuwuyu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content>
-    <meta name="description" content="毕竟几人真得鹿，不知终日梦为鱼。">
+    <meta name="keywords" content="算法,数论,基本数学">
+    <meta name="description" content="BSGS是用于求解一些已知n次幂求n的算法">
+<meta name="keywords" content="算法,数论,基本数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="post">
-<meta property="og:url" content="http://yoursite.com/2019/02/28/测试 - 副本 (5)/index.html">
+<meta property="og:title" content="斐波那契的通项公式及BSGS算法">
+<meta property="og:url" content="http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/index.html">
 <meta property="og:site_name" content="和平星">
-<meta property="og:description" content="毕竟几人真得鹿，不知终日梦为鱼。">
+<meta property="og:description" content="BSGS是用于求解一些已知n次幂求n的算法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T11:26:53.668Z">
+<meta property="og:updated_time" content="2019-03-02T13:02:29.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="post">
-<meta name="twitter:description" content="毕竟几人真得鹿，不知终日梦为鱼。">
+<meta name="twitter:title" content="斐波那契的通项公式及BSGS算法">
+<meta name="twitter:description" content="BSGS是用于求解一些已知n次幂求n的算法">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
@@ -101,11 +102,11 @@
 </aside>
 
     <main id="main">
-        <link rel="stylesheet" href="/live2d/css/live2d.css">
+        <!-- <link rel="stylesheet" href="/live2d/css/live2d.css">
         <div id="landlord">
             <div class="message" style="opacity:0"></div>
             <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-            <div class="hide-button">隐藏</div>
+            <div class="hide-button">隝藝</div>
         </div>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript">
@@ -116,13 +117,13 @@
         <script type="text/javascript" src="/live2d/js/message.js"></script>
         <script type="text/javascript">
             loadlive2d("live2d", "/live2d/model/xue/model.json");
-        </script>
+        </script> -->
         <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">post</div>
+        <div class="flex-col header-title ellipsis">斐波那契的通项公式及BSGS算法</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -144,11 +145,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">post</h1>
+        <h1 class="title">斐波那契的通项公式及BSGS算法</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-02-28T11:25:38.000Z" itemprop="datePublished" class="page-time">
-  2019-02-28
+                <time datetime="2019-03-02T12:32:25.000Z" itemprop="datePublished" class="page-time">
+  2019-03-02
 </time>
 
 
@@ -164,13 +165,20 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#求解斐波那契的通项公式"><span class="post-toc-number">1.</span> <span class="post-toc-text">求解斐波那契的通项公式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#BSGS算法"><span class="post-toc-number">2.</span> <span class="post-toc-text">BSGS算法</span></a></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-测试 - 副本 (5)" class="post-article article-type-post fade" itemprop="blogPost">
+
+<article id="“-斐波那契的通项公式及BSGS算法" class="post-article article-type-“ fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">post</h1>
+        <h1 class="post-card-title">斐波那契的通项公式及BSGS算法</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-02-28 19:25:38" datetime="2019-02-28T11:25:38.000Z" itemprop="datePublished">2019-02-28</time>
+            <time class="post-time" title="2019-03-02 20:32:25" datetime="2019-03-02T12:32:25.000Z" itemprop="datePublished">2019-03-02</time>
 
             
 
@@ -183,7 +191,20 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <p>BSGS是用于求解一些已知n次幂求n的算法</p>
+<a id="more"></a>
+<p>与zyf在上课时，想到：<br>能不能在模条件下求一个数字是斐波那契的第几项(取最小)。<br>在网上发现了可以解决这个问题的方法。</p>
+<p>我了解到，斐波那契是有通项公式的。</p>
+<h1 id="求解斐波那契的通项公式"><a href="#求解斐波那契的通项公式" class="headerlink" title="求解斐波那契的通项公式"></a>求解斐波那契的通项公式</h1><p>求通项公式有好多种方法，在这里，我<del>只会</del>只讲一个方法</p>
+<p>一个标准的斐波那契数列，为<br>F[n]=F[n-1]+F[n-2];</p>
+<p>先设两个变量，a,b,使得等式：<br>F[n]-aF[n-1]=b(F[n-1]-aF[n-2])<br>成立。</p>
+<p>然后将其化简，得到<br>F[n]=(a+b)F[n-1]-abF[n-2];</p>
+<p>所以可以知道a、b的关系：<br>a+b=1<br>a*b=-1  </p>
+<p>接着写后面的n-2项:<br>F[n]-aF[n-1]=b(F[n-1]-aF[n-2])<br>F[n-1]-aF[n-2]=b(F[n-2]-aF[n-3])<br>F[n-2]-aF[n-3]=b(F[n-3]-aF[n-4])<br>…<br>F[3]-aF[2]=b(F[2]-aF[1])<br>合并得到：<br>F[n]-aF[n-1]=b^(n-2)(F[2]-aF[1])<br>因为F[1]=F[2]=1,a+b=1;<br>所以F[2]-aF[1]=b,<br>F[n]=b^(n-1)+aF[n-1].<br>再接着写后面的n-1项:<br>F[n]=b^(n-1)+aF[n-1]<br>F[n-1]=b^(n-2)+aF[n-2]<br>F[n-2]=b^(n-3)+aF[n-3]<br>…<br>F[2]=b+aF[1]<br>合并——得到:<br>F[n]=b^(n-1)+ab^(n-2)+a^2b^(n-3)+…+a^(n-2)b+a^(n-1).<br>不难发现这是一个等比数列，公比为a/b。所以用等比数列求和式子得到F[n]的表达式——<br>F[n]=(b^n-a^n)/(b-a).</p>
+<p>通过 a+b=1和ab=-1,可以解出a=(1+sqrt(5))/2,b=(1-sqrt(5))/2。</p>
+<p>所以——<br>F[n]=…  </p>
+<h1 id="BSGS算法"><a href="#BSGS算法" class="headerlink" title="BSGS算法"></a>BSGS算法</h1><p>待续…</p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -191,7 +212,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-02-28T11:26:53.668Z" itemprop="dateUpdated">2019-02-28 19:26:53</time>
+    最后更新时间：<time datetime="2019-03-02T13:02:29.540Z" itemprop="dateUpdated">2019-03-02 21:02:29</time>
 </span><br>
 
 
@@ -213,6 +234,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本数学/">基本数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -221,7 +244,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&title=《post》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&title=《斐波那契的通项公式及BSGS算法》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -231,22 +254,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&title=《post》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&title=《斐波那契的通项公式及BSGS算法》 — 和平星&source=BSGS是用于求解一些已知n次幂求n的算法" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/02/28/测试 - 副本 (5)/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《post》 — 和平星&url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《斐波那契的通项公式及BSGS算法》 — 和平星&url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -266,21 +289,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/02/28/测试 - 副本 (3)/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">post</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2019/02/28/测试 - 副本/" id="post-next" class="post-nav-link">
+      <a href="/2019/02/26/更新日志/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">post</h4>
+        <h4 class="title">博客更新日志</h4>
       </a>
     </div>
   
@@ -377,7 +393,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&title=《post》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&title=《斐波那契的通项公式及BSGS算法》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -387,22 +403,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&title=《post》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&title=《斐波那契的通项公式及BSGS算法》 — 和平星&source=BSGS是用于求解一些已知n次幂求n的算法" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/02/28/测试 - 副本 (5)/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《post》 — 和平星&url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《斐波那契的通项公式及BSGS算法》 — 和平星&url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/02/28/测试 - 副本 (5)/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -413,7 +429,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/02/28/测试 - 副本 (5)/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/03/02/斐波那契的通项公式及BSGS算法/" alt="微信分享二维码">
 </div>
 
 
