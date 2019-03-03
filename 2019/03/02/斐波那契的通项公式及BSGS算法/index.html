@@ -33,7 +33,7 @@
 <meta property="og:site_name" content="和平星">
 <meta property="og:description" content="BSGS是用于求解一些已知n次幂求n的算法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-02T14:00:23.638Z">
+<meta property="og:updated_time" content="2019-03-03T12:48:20.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契的通项公式及BSGS算法">
 <meta name="twitter:description" content="BSGS是用于求解一些已知n次幂求n的算法">
@@ -198,17 +198,17 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>BSGS是用于求解一些已知n次幂求n的算法</p>
 <a id="more"></a>
-<p><iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1344874921&auto=1&height=66"></iframe><br>与zyf在上课时，想到：<br>能不能在模条件下求一个数字是斐波那契的第几项(取最小)。<br>在网上发现了可以解决这个问题的方法。</p>
-<p>我了解到，斐波那契是有通项公式的。</p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1344874921&auto=1&height=66"></iframe><br>与zyf在上课时，想到：<br>能不能在模条件下求一个数字是斐波那契的第几项(取最小)。<br>在网上发现了可以解决这个问题的方法。</p>
+<p>我了解到，斐波那契是有通项公式的。  </p>
 <h1 id="求解斐波那契的通项公式"><a href="#求解斐波那契的通项公式" class="headerlink" title="求解斐波那契的通项公式"></a>求解斐波那契的通项公式</h1><p>求通项公式有好多种方法，在这里，我<del>只会</del>只讲一个方法</p>
-<p>一个标准的斐波那契数列，为<br>F[n]=F[n-1]+F[n-2];</p>
-<p>先设两个变量，a,b,使得等式：<br>F[n]-aF[n-1]=b(F[n-1]-aF[n-2])<br>成立。</p>
-<p>然后将其化简，得到<br>F[n]=(a+b)F[n-1]-abF[n-2];</p>
-<p>所以可以知道a、b的关系：<br>a+b=1<br>a*b=-1  </p>
-<p>接着写后面的n-2项:<br>F[n]-aF[n-1]=b(F[n-1]-aF[n-2])<br>F[n-1]-aF[n-2]=b(F[n-2]-aF[n-3])<br>F[n-2]-aF[n-3]=b(F[n-3]-aF[n-4])<br>…<br>F[3]-aF[2]=b(F[2]-aF[1])<br>合并得到：<br>F[n]-aF[n-1]=b^(n-2)(F[2]-aF[1])<br>因为F[1]=F[2]=1,a+b=1;<br>所以F[2]-aF[1]=b,<br>F[n]=b^(n-1)+aF[n-1].<br>再接着写后面的n-1项:<br>F[n]=b^(n-1)+aF[n-1]<br>F[n-1]=b^(n-2)+aF[n-2]<br>F[n-2]=b^(n-3)+aF[n-3]<br>…<br>F[2]=b+aF[1]<br>合并——得到:<br>F[n]=b^(n-1)+ab^(n-2)+a^2b^(n-3)+…+a^(n-2)b+a^(n-1).<br>不难发现这是一个等比数列，公比为a/b。所以用等比数列求和式子得到F[n]的表达式——<br>F[n]=(b^n-a^n)/(b-a).</p>
-<p>通过 a+b=1和ab=-1,可以解出a=(1+sqrt(5))/2,b=(1-sqrt(5))/2。</p>
-<p>所以——<br>F[n]=…  </p>
-<h1 id="BSGS算法"><a href="#BSGS算法" class="headerlink" title="BSGS算法"></a>BSGS算法</h1><p>待续…</p>
+<p>一个标准的斐波那契数列，为<br>\(F[n]=F[n-1]+F[n-2]\)</p>
+<p>先设两个变量，a,b,使得等式：<br>\(F[n]-aF[n-1]=b(F[n-1]-aF[n-2])\)<br>成立。</p>
+<p>然后将其化简，得到<br>\(F[n]=(a+b)F[n-1]-abF[n-2]\)</p>
+<p>所以可以知道a、b的关系：<br>\(\begin{cases} a+b  = 1\\<br>a*b  = -1\ \end{cases}\)</p>
+<p>接着写后面的n-2项:<br>\(F[n]-aF[n-1]=b(F[n-1]-aF[n-2])\)<br>\(F[n-1]-aF[n-2]=b(F[n-2]-aF[n-3])\)<br>\(F[n-2]-aF[n-3]=b(F[n-3]-aF[n-4])\)<br>\(…\)<br>\(F[3]-aF[2]=b(F[2]-aF[1])\)<br>合并得到：<br>\(F[n]-aF[n-1]=b^(n-2)(F[2]-aF[1])\)<br>\(\because F[1]=F[2]=1,a+b=1\)<br>\(\therefore F[2]-aF[1]=b,F[n]=b^{n-1}+aF[n-1]\)</p>
+<p>再接着写后面的n-1项:<br>\(F[n]=b^{n-1}+aF[n-1]\)<br>\(F[n-1]=b^{n-2}+aF[n-2]\)<br>\(F[n-2]=b^{n-3}+aF[n-3]\)<br>\(…\)<br>\(F[2]=b+aF[1]\)<br>合并——得到:<br>\(F[n]=b^{n-1}+ab^{n-2}+a^{2}b^{n-3}+…+a^{n-2}b+a^{n-1}\)<br>不难发现这是一个等比数列，公比为\(\frac{a}{b}\)。所以用等比数列求和式子得到F[n]的表达式——<br>\[F[n]=\frac{b^{n}-a^{n}}{b-a}\]<br>通过\(a+b=1\)和\(ab=-1\),可以解出<br>\(a=\frac{1+\sqrt{5}}{2}\)<br>\(b=\frac{1-\sqrt{5}}{2}\)</p>
+<p>所以——<br>\[F[n]=\frac{1}{\sqrt{5}}\left [\left ( \frac{1+\sqrt{5}}{2} \right )^{n} +\left ( \frac{1-\sqrt{5}}{2} \right )^{n}\right ]\]</p>
+<h1 id="BSGS算法"><a href="#BSGS算法" class="headerlink" title="BSGS算法"></a>BSGS算法</h1><p>BSGS(BABY-STEP GIANT-STEP)用于解决高次同余方程的问题。  </p>
 
         </div>
 
@@ -217,7 +217,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-02T14:00:23.638Z" itemprop="dateUpdated">2019-03-02 22:00:23</time>
+    最后更新时间：<time datetime="2019-03-03T12:48:20.303Z" itemprop="dateUpdated">2019-03-03 20:48:20</time>
 </span><br>
 
 
@@ -470,6 +470,28 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 <script src="/js/search.min.js?v=1.7.2" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    displayAlign: "left",
+    displayIndent: "2em"
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
 
