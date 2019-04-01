@@ -26,26 +26,26 @@ ga('send', 'pageview');
     <meta name="baidu-site-verification" content="498724CQkp">
     
     
-    <title>博客更新日志 | 和平星 |
+    <title>后缀数组和后缀自动机 | 和平星 |
         この遥かなる旅路に祝福を</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="杂谈">
-    <meta name="description" content="闲来无事搞个博客，功能简陋，等待更新。">
-<meta name="keywords" content="杂谈">
+    <meta name="keywords" content="算法,字符串,自动机">
+    <meta name="description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
+<meta name="keywords" content="算法,字符串,自动机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客更新日志">
-<meta property="og:url" content="http://liulibury.top/2019/02/26/更新日志/index.html">
+<meta property="og:title" content="后缀数组和后缀自动机">
+<meta property="og:url" content="http://liulibury.top/2019/02/26/后缀数组和后缀自动机/index.html">
 <meta property="og:site_name" content="和平星">
-<meta property="og:description" content="闲来无事搞个博客，功能简陋，等待更新。">
+<meta property="og:description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T11:19:46.921Z">
+<meta property="og:updated_time" content="2019-03-08T10:02:18.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客更新日志">
-<meta name="twitter:description" content="闲来无事搞个博客，功能简陋，等待更新。">
+<meta name="twitter:title" content="后缀数组和后缀自动机">
+<meta name="twitter:description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
@@ -137,7 +137,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">博客更新日志</div>
+        <div class="flex-col header-title ellipsis">后缀数组和后缀自动机</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -159,7 +159,7 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">博客更新日志</h1>
+        <h1 class="title">后缀数组和后缀自动机</h1>
         <h5 class="subtitle">
             
                 <time datetime="2019-02-26T10:34:52.000Z" itemprop="datePublished" class="page-time">
@@ -182,15 +182,15 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#闲来无事搞个博客，功能简陋，等待更新。"><span class="post-toc-number">1.</span> <span class="post-toc-text">闲来无事搞个博客，功能简陋，等待更新。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2018-2-28"><span class="post-toc-number">2.</span> <span class="post-toc-text">2018/2/28</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-27"><span class="post-toc-number">3.</span> <span class="post-toc-text">2019/2/27</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2019-2-26"><span class="post-toc-number">4.</span> <span class="post-toc-text">2019/2/26</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#后缀数组-suffix-array"><span class="post-toc-number">1.</span> <span class="post-toc-text">后缀数组(suffix array)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#倍增法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">倍增法</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-更新日志" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-后缀数组和后缀自动机" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">博客更新日志</h1>
+        <h1 class="post-card-title">后缀数组和后缀自动机</h1>
         <div class="post-meta">
             <time class="post-time" title="2019-02-26 18:34:52" datetime="2019-02-26T10:34:52.000Z" itemprop="datePublished">2019-02-26</time>
 
@@ -205,10 +205,14 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="闲来无事搞个博客，功能简陋，等待更新。"><a href="#闲来无事搞个博客，功能简陋，等待更新。" class="headerlink" title="闲来无事搞个博客，功能简陋，等待更新。"></a>闲来无事搞个博客，功能简陋，等待更新。</h2><a id="more"></a>
-<h2 id="2018-2-28"><a href="#2018-2-28" class="headerlink" title="2018/2/28"></a>2018/2/28</h2><p>1.重新选择了博客的主题<br>2.加入了很多图片什么的<br>3.。。。</p>
-<h2 id="2019-2-27"><a href="#2019-2-27" class="headerlink" title="2019/2/27"></a>2019/2/27</h2><p>1.初步加入了live2d<br>2.由于背景透明的缘故，导致live2d也透明，正在解决。</p>
-<h2 id="2019-2-26"><a href="#2019-2-26" class="headerlink" title="2019/2/26"></a>2019/2/26</h2><p>1.背景透明<br>2.苦心爬下来的背景图片</p>
+            <p>整理归纳复习和巩固一下后缀相关的算法。  </p>
+<h1 id="后缀数组-suffix-array"><a href="#后缀数组-suffix-array" class="headerlink" title="后缀数组(suffix array)"></a>后缀数组(suffix array)</h1><p>一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。<br>感想说到这里，该进入正题了。<br>后缀数组，顾名思义，是用数组处理后缀字符串的一种算法。但是它的不仅可以用于后缀和字符串，一些涉及到子串和数组的题目，也是能用后缀数组解决的。后缀数组的目的，是将所有后缀进行快速的排序。由于其本身和后缀树的 dfs 序有一定联系，也有很多很好的性质，在其上建立了很多的算法。<br>后缀数组的算法常用的有两种，倍增法和dc3法。还有刚刚了解到的SA-IS法。  </p>
+<h2 id="倍增法"><a href="#倍增法" class="headerlink" title="倍增法"></a>倍增法</h2><p>倍增法算是求后缀数组的最<del>咸鱼</del>简单的方法了。它的时间复杂度为\(O(NlogN)\)  </p>
+<p>我们先了解几个数组：<br>SA数组：后缀数组的最后目标————对后缀串进行排序以后每个名次的位置。例如字符串”ABBA”，排序完成后的SA数组为：SA[1]=4,SA[2]=1,SA[3]=3,SA[4]=2。<br>rank数组：在进行排序时候的辅助，一个强壮的大哥背后一定有个兢兢业业的好辅助，表示对后缀串进行排序以后每个位置的名次，与SA数组取反：rank[1]=2,rank[2]=4,rank[3]=3,rank[4]=1。<br>height数组：记录sa[i]和sa[i-1]的最长公共前缀长度。<br>再了解一个叫基数排序的东西：  </p>
+<blockquote>
+<p>百度百科：<br>基数排序（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为O (nlog(r)m)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。<br>以LSD为例，假设原来有一串数值如下所示：<br>73, 22, 93, 43, 55, 14, 28, 65, 39, 81<br>首先根据个位数的数值，在走访数值时将它们分配至编号0到9的桶子中：<br>0<br>1 81<br>2 22<br>3 73 93 43<br>4 14<br>5 55 65<br>6<br>7<br>8 28<br>9 39<br>第二步<br>接下来将这些桶子中的数值重新串接起来，成为以下的数列：<br>81, 22, 73, 93, 43, 14, 55, 65, 28, 39<br>接着再进行一次分配，这次是根据十位数来分配：<br>0<br>1 14<br>2 22 28<br>3 39<br>4 43<br>5 55<br>6 65<br>7 73<br>8 81<br>9 93<br>第三步<br>接下来将这些桶子中的数值重新串接起来，成为以下的数列：<br>14, 22, 28, 39, 43, 55, 65, 73, 81, 93<br>这时候整个数列已经排序完毕；如果排序的对象有三位数以上，则持续进行以上的动作直至最高位数为止。<br>LSD的基数排序适用于位数小的数列，如果位数多的话，使用MSD的效率会比较好。MSD的方式与LSD相反，是由高位数为基底开始进行分配，但在分配之后并不马上合并回一个数组中，而是在每个“桶子”中建立“子桶”，将每个桶子中的数值按照下一数位的值分配到“子桶”中。在进行完最低位数的分配后再合并回单一的数组中。  </p>
+</blockquote>
+<p>好的，再了解完基数排序后，我们就可以进入后缀数组的排序啦(鼓掌~)。<br>既然数字可以按照每位进行基数排序，那么后缀是不是也可以按照每位的字符这样操作呢？  </p>
 
         </div>
 
@@ -217,7 +221,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-02-28T11:19:46.921Z" itemprop="dateUpdated">2019-02-28 19:19:46</time>
+    最后更新时间：<time datetime="2019-03-08T10:02:18.814Z" itemprop="dateUpdated">2019-03-08 18:02:18</time>
 </span><br>
 
 
@@ -239,7 +243,7 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动机/">自动机</a></li></ul>
 
 
             
@@ -249,7 +253,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liulibury.top/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -259,22 +263,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=闲来无事搞个博客，功能简陋，等待更新。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liulibury.top/2019/02/26/更新日志/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《博客更新日志》 — 和平星&url=http://liulibury.top/2019/02/26/更新日志/&via=http://liulibury.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后缀数组和后缀自动机》 — 和平星&url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&via=http://liulibury.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liulibury.top/2019/02/26/更新日志/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -297,20 +301,13 @@ ga('send', 'pageview');
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2019/03/02/斐波那契的通项公式及BSGS算法/" id="post-prev" class="post-nav-link">
+      <a href="/2019/02/26/更新日志/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">斐波那契的通项公式及BSGS算法</h4>
+        <h4 class="title">博客更新日志</h4>
       </a>
     </div>
   
 
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2019/02/26/后缀数组和后缀自动机/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">后缀数组和后缀自动机</h4>
-      </a>
-    </div>
   
 </nav>
 
@@ -405,7 +402,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liulibury.top/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&pic=https://s2.ax1x.com/2019/03/02/kqm8Cn.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -415,22 +412,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/更新日志/&title=《博客更新日志》 — 和平星&source=闲来无事搞个博客，功能简陋，等待更新。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liulibury.top/2019/02/26/更新日志/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《博客更新日志》 — 和平星&url=http://liulibury.top/2019/02/26/更新日志/&via=http://liulibury.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后缀数组和后缀自动机》 — 和平星&url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&via=http://liulibury.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liulibury.top/2019/02/26/更新日志/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -441,7 +438,7 @@ ga('send', 'pageview');
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://liulibury.top/2019/02/26/更新日志/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/" alt="微信分享二维码">
 </div>
 
 
