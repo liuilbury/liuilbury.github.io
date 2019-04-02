@@ -34,18 +34,18 @@ ga('send', 'pageview');
     
     
     <meta name="keywords" content="算法,字符串,自动机">
-    <meta name="description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
+    <meta name="description" content="整理归纳复习和巩固一下后缀相关的算法。">
 <meta name="keywords" content="算法,字符串,自动机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后缀数组和后缀自动机">
 <meta property="og:url" content="http://liulibury.top/2019/02/26/后缀数组和后缀自动机/index.html">
 <meta property="og:site_name" content="和平星">
-<meta property="og:description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
+<meta property="og:description" content="整理归纳复习和巩固一下后缀相关的算法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-08T10:02:18.814Z">
+<meta property="og:updated_time" content="2019-04-02T04:27:39.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="后缀数组和后缀自动机">
-<meta name="twitter:description" content="整理归纳复习和巩固一下后缀相关的算法。   后缀数组(suffix array)一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。感想说到这里，该进入">
+<meta name="twitter:description" content="整理归纳复习和巩固一下后缀相关的算法。">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
@@ -205,7 +205,7 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>整理归纳复习和巩固一下后缀相关的算法。  </p>
+            <p>整理归纳复习和巩固一下后缀相关的算法。<br><a id="more"></a></p>
 <h1 id="后缀数组-suffix-array"><a href="#后缀数组-suffix-array" class="headerlink" title="后缀数组(suffix array)"></a>后缀数组(suffix array)</h1><p>一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。<br>感想说到这里，该进入正题了。<br>后缀数组，顾名思义，是用数组处理后缀字符串的一种算法。但是它的不仅可以用于后缀和字符串，一些涉及到子串和数组的题目，也是能用后缀数组解决的。后缀数组的目的，是将所有后缀进行快速的排序。由于其本身和后缀树的 dfs 序有一定联系，也有很多很好的性质，在其上建立了很多的算法。<br>后缀数组的算法常用的有两种，倍增法和dc3法。还有刚刚了解到的SA-IS法。  </p>
 <h2 id="倍增法"><a href="#倍增法" class="headerlink" title="倍增法"></a>倍增法</h2><p>倍增法算是求后缀数组的最<del>咸鱼</del>简单的方法了。它的时间复杂度为\(O(NlogN)\)  </p>
 <p>我们先了解几个数组：<br>SA数组：后缀数组的最后目标————对后缀串进行排序以后每个名次的位置。例如字符串”ABBA”，排序完成后的SA数组为：SA[1]=4,SA[2]=1,SA[3]=3,SA[4]=2。<br>rank数组：在进行排序时候的辅助，一个强壮的大哥背后一定有个兢兢业业的好辅助，表示对后缀串进行排序以后每个位置的名次，与SA数组取反：rank[1]=2,rank[2]=4,rank[3]=3,rank[4]=1。<br>height数组：记录sa[i]和sa[i-1]的最长公共前缀长度。<br>再了解一个叫基数排序的东西：  </p>
@@ -221,7 +221,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-08T10:02:18.814Z" itemprop="dateUpdated">2019-03-08 18:02:18</time>
+    最后更新时间：<time datetime="2019-04-02T04:27:39.998Z" itemprop="dateUpdated">2019-04-02 12:27:39</time>
 </span><br>
 
 
@@ -263,7 +263,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=整理归纳复习和巩固一下后缀相关的算法。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -301,20 +301,13 @@ ga('send', 'pageview');
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2019/03/02/斐波那契的通项公式及BSGS算法/" id="post-prev" class="post-nav-link">
+      <a href="/2019/02/26/更新日志/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">斐波那契的通项公式及BSGS算法</h4>
+        <h4 class="title">博客更新日志</h4>
       </a>
     </div>
   
 
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2019/02/26/更新日志/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">博客更新日志</h4>
-      </a>
-    </div>
   
 </nav>
 
@@ -419,7 +412,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=毕竟几人真得鹿，不知终日梦为鱼。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liulibury.top/2019/02/26/后缀数组和后缀自动机/&title=《后缀数组和后缀自动机》 — 和平星&source=整理归纳复习和巩固一下后缀相关的算法。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

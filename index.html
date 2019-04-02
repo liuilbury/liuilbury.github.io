@@ -218,58 +218,6 @@ ga('send', 'pageview');
     </li>
     
     <li class="post-list-item fade">
-        <article id="post-后缀数组和后缀自动机" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-02-26 18:34:52" datetime="2019-02-26T10:34:52.000Z" itemprop="datePublished">2019-02-26</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/02/26/后缀数组和后缀自动机/">后缀数组和后缀自动机</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>整理归纳复习和巩固一下后缀相关的算法。  </p>
-<h1 id="后缀数组-suffix-array"><a href="#后缀数组-suffix-array" class="headerlink" title="后缀数组(suffix array)"></a>后缀数组(suffix array)</h1><p>一开始接触后缀数组的时候，只是鶸在多校的一道题目，大佬说用后缀数组写，然后就去百度学，后来发现其实可以用kmp找循环节就能过，就将后缀数组搁浅了(大佬到最后也没用后缀数组过，tle了)。到如今，我也没有用后缀数组在比赛中通过一道题目，后缀数组的题目也寥寥无几。也许这是被时代所抛弃的一个算法吧233。<br>感想说到这里，该进入正题了。<br>后缀数组，顾名思义，是用数组处理后缀字符串的一种算法。但是它的不仅可以用于后缀和字符串，一些涉及到子串和数组的题目，也是能用后缀数组解决的。后缀数组的目的，是将所有后缀进行快速的排序。由于其本身和后缀树的 dfs 序有一定联系，也有很多很好的性质，在其上建立了很多的算法。<br>后缀数组的算法常用的有两种，倍增法和dc3法。还有刚刚了解到的SA-IS法。  </p>
-<h2 id="倍增法"><a href="#倍增法" class="headerlink" title="倍增法"></a>倍增法</h2><p>倍增法算是求后缀数组的最<del>咸鱼</del>简单的方法了。它的时间复杂度为\(O(NlogN)\)  </p>
-<p>我们先了解几个数组：<br>SA数组：后缀数组的最后目标————对后缀串进行排序以后每个名次的位置。例如字符串”ABBA”，排序完成后的SA数组为：SA[1]=4,SA[2]=1,SA[3]=3,SA[4]=2。<br>rank数组：在进行排序时候的辅助，一个强壮的大哥背后一定有个兢兢业业的好辅助，表示对后缀串进行排序以后每个位置的名次，与SA数组取反：rank[1]=2,rank[2]=4,rank[3]=3,rank[4]=1。<br>height数组：记录sa[i]和sa[i-1]的最长公共前缀长度。<br>再了解一个叫基数排序的东西：  </p>
-<blockquote>
-<p>百度百科：<br>基数排序（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为O (nlog(r)m)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。<br>以LSD为例，假设原来有一串数值如下所示：<br>73, 22, 93, 43, 55, 14, 28, 65, 39, 81<br>首先根据个位数的数值，在走访数值时将它们分配至编号0到9的桶子中：<br>0<br>1 81<br>2 22<br>3 73 93 43<br>4 14<br>5 55 65<br>6<br>7<br>8 28<br>9 39<br>第二步<br>接下来将这些桶子中的数值重新串接起来，成为以下的数列：<br>81, 22, 73, 93, 43, 14, 55, 65, 28, 39<br>接着再进行一次分配，这次是根据十位数来分配：<br>0<br>1 14<br>2 22 28<br>3 39<br>4 43<br>5 55<br>6 65<br>7 73<br>8 81<br>9 93<br>第三步<br>接下来将这些桶子中的数值重新串接起来，成为以下的数列：<br>14, 22, 28, 39, 43, 55, 65, 73, 81, 93<br>这时候整个数列已经排序完毕；如果排序的对象有三位数以上，则持续进行以上的动作直至最高位数为止。<br>LSD的基数排序适用于位数小的数列，如果位数多的话，使用MSD的效率会比较好。MSD的方式与LSD相反，是由高位数为基底开始进行分配，但在分配之后并不马上合并回一个数组中，而是在每个“桶子”中建立“子桶”，将每个桶子中的数值按照下一数位的值分配到“子桶”中。在进行完最低位数的分配后再合并回单一的数组中。  </p>
-</blockquote>
-<p>好的，再了解完基数排序后，我们就可以进入后缀数组的排序啦(鼓掌~)。<br>既然数字可以按照每位进行基数排序，那么后缀是不是也可以按照每位的字符这样操作呢？  </p>
-
-    
-
-        <a href="/2019/02/26/后缀数组和后缀自动机/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动机/">自动机</a></li></ul>
-
-    </div>
-    
-</article>
-
-    </li>
-    
-    <li class="post-list-item fade">
         <article id="post-更新日志" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -306,6 +254,50 @@ ga('send', 'pageview');
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+
+    </div>
+    
+</article>
+
+    </li>
+    
+    <li class="post-list-item fade">
+        <article id="post-后缀数组和后缀自动机" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-02-26 18:34:52" datetime="2019-02-26T10:34:52.000Z" itemprop="datePublished">2019-02-26</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/02/26/后缀数组和后缀自动机/">后缀数组和后缀自动机</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <p>整理归纳复习和巩固一下后缀相关的算法。<br>
+    
+
+        <a href="/2019/02/26/后缀数组和后缀自动机/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </p></div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动机/">自动机</a></li></ul>
 
     </div>
     
